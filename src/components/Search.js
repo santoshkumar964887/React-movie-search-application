@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from "react";
 import { ResultCard } from "./ResultCard";
-
+import '../lib/font-awesome/css/style.css';
 export const Add = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -26,7 +26,7 @@ useEffect(()=>{
     setQuery(e.target.value);
 
     fetch(
-      "http://www.omdbapi.com/?s=action&apikey=611ad92e"
+      "http://www.omdbapi.com/?s=war&apikey=611ad92e"
     )
       .then((res) => res.json())
       .then((data) => {
@@ -40,8 +40,8 @@ useEffect(()=>{
   };
 
   return (
-    <div className="add-page">
-      <div className="container">
+    <div >
+      
         <div className="add-content">
           <div className="input-wrapper">
             <input
@@ -51,9 +51,9 @@ useEffect(()=>{
               onChange={onChange}
             />
           </div>
-
+          </div>
           {results.length > 0 && (
-            <ul className="results">
+            <ul className="results1">
               {results.map((movie) => (
                 <li key={movie.imdbID}>
                   <ResultCard movie={movie} />
@@ -61,8 +61,8 @@ useEffect(()=>{
               ))}
             </ul>
           )}
-        </div>
-      </div>
+        
+      
     </div>
   );
 };

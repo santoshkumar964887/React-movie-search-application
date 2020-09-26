@@ -1,0 +1,21 @@
+.results1{
+    width:95vw;
+    display: flex;
+    flex-wrap:wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+   
+}
+.poster1{
+    width: 250px;
+    height: 320px;
+    background-size: cover;
+    margin: 10px;
+    
+}
+.poster1:hover{
+    transform: scale(1.15);
+    opacity:0.5;
+    transition:all 2s ease-in-out;
+}
