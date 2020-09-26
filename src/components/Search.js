@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { ResultCard } from "./ResultCard";
 import "../lib/font-awesome/css/style.css";
+import SearchIcon from '@material-ui/icons/Search';
 export const Add = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
+  const [selectQuery, setSelectQuery] = useState("movie");
 
   useEffect(() => {
     fetch("http://www.omdbapi.com/?s=action&apikey=611ad92e")
@@ -20,8 +22,13 @@ export const Add = () => {
     e.preventDefault();
 
     setQuery(e.target.value);
-
-    fetch("http://www.omdbapi.com/?s=war&apikey=611ad92e")
+  };
+  const handleSelect = (e) => {
+    setSelectQuery(e.target.value);
+  };
+  const handleClick = () => {
+    console.log(`http://www.omdbapi.com/?type=${selectQuery}&s=${query}&apikey=611ad92e`);
+    fetch(`http://www.omdbapi.com/?type=${selectQuery}&s=${query}&apikey=611ad92e`)
       .then((res) => res.json())
       .then((data) => {
         if (!data.errors) {
@@ -31,31 +38,34 @@ export const Add = () => {
         }
       });
   };
-
   return (
     <div>
-      
-        <div className="input-wrapper">
-          <input
+      <div className="input-wrapper">
+        <input
           className="input2"
-            type="text"
-            placeholder="Search for a movie"
-            value={query}
-            onChange={onChange}
-          />
-          <div>
-          <select value="Select Type" id="cars">
+          type="text"
+          placeholder="Search for a movie"
+          value={query}
+          onChange={onChange}
+        />
+        <div>
+          <select value={selectQuery} id="cars" onChange={handleSelect}>
             <option value="volvo">Select Type</option>
-            <option value="saab">All</option>
-            <option value="fiat">Movie</option>
-            <option value="audi">Series, episode</option>
-            <option value="audi">Episode</option>
+            <option value="all">All</option>
+            <option value="movie">Movie</option>
+            <option value="series">Series</option>
+            <option value="episode">Episode</option>
           </select>
-          </div>
-          <div><button type="button" class="btn btn-success">Success</button></div>
         </div>
-      
-      {results.length > 0 && (
+        <div>
+          <button type="button" onClick={handleClick} className="btn btn-success" >
+            <SearchIcon />
+            <span id="btn-success"> Success</span>
+          </button>
+        </div>
+      </div>
+
+      {results.length > 0 ? (
         <ul className="results1">
           {results.map((movie) => (
             <li key={movie.imdbID}>
@@ -63,7 +73,7 @@ export const Add = () => {
             </li>
           ))}
         </ul>
-      )}
+      ):<h2>Your Search Is Not Found!</h2>}
     </div>
   );
 };
