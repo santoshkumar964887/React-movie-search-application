@@ -1,3 +1,6 @@
+.poster-wrappers1{
+    position: relative;
+}
 .results1{
     width:95vw;
     display: flex;
@@ -17,7 +20,7 @@
 }
 .poster1:hover{
     transform: scale(1.05);
-    opacity:0.5;
+    
     transition:all 2s ease-in-out;
 }
 .card-container1{
@@ -33,4 +36,21 @@
 }
 .info1>div>h4{
     margin:0px 10px;
+}
+.btn1{
+    background-color: rgb(129, 129, 129);
+    color:blue;
+    position:absolute;
+    right:20px;
+    top:10px;
+    z-index: 100;
+
+}
+.btn1:hover{
+    background-color: rgb(165, 0, 0);
+}
+.activecolor{
+    color: rgb(197, 14, 14);
+    font-weight: 900;
+    font-size: 20px;
 }

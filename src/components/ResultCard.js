@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext,useState} from "react";
 import Moment from "react-moment";
 import { GlobalContext } from "../context/GlobalState";
 import "../lib/font-awesome/css/style.css";
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 export const ResultCard = ({ movie }) => {
+  const [colorClass,setColorClass]=useState("")
   const {
     addMovieToWatched,
 
@@ -19,7 +21,16 @@ export const ResultCard = ({ movie }) => {
         <div>
           <h3 className="title">{movie.Title}</h3>
         </div>
-        <div className="poster-wrappers">
+        <div className="poster-wrappers1">
+       
+        <button
+          className="btn1"
+          disabled={watchedDisabled}
+          onClick={() => addMovieToWatched(movie)}
+        >
+          <FavoriteBorderIcon className={colorClass} onClick={()=>setColorClass("activecolor")} />
+        </button>
+      
           {movie.Poster ? (
             <img
               className="poster1"
@@ -39,15 +50,7 @@ export const ResultCard = ({ movie }) => {
           
         </div>
       </div>
-      <div className="controls">
-        <button
-          className="btn"
-          disabled={watchedDisabled}
-          onClick={() => addMovieToWatched(movie)}
-        >
-          Favorite
-        </button>
-      </div>
+    
     </div>
   );
 };
