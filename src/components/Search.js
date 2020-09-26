@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { ResultCard } from "./ResultCard";
 
 export const Add = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
 
+useEffect(()=>{
+  fetch(
+    "http://www.omdbapi.com/?s=action&apikey=611ad92e"
+  )
+    .then((res) => res.json())
+    .then((data) => {
+      if (!data.errors) {
+        
+        setResults(data.Search);
+      } else {
+        setResults([]);
+      }
+    });
+
+},[])
   const onChange = (e) => {
     e.preventDefault();
 
