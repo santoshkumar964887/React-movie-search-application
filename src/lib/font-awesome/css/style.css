@@ -29,6 +29,7 @@
 }
 .title{
     margin:10px auto 3px 10px;
+    text-decoration: none;
 }
 .info1{
     display: flex;
@@ -53,4 +54,32 @@
     color: rgb(197, 14, 14);
     font-weight: 900;
     font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+.input-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+   
+}
+.input2{
+  width: 30vw;
+  height: 35px;
+  border-radius:4px;
+  background-color: #032541;
+  color: white;
+}
+::placeholder{
+    padding:30px;
+    background-color: #032541;
+    color: white;
+}
+#cars{
+    height: 35px;
+    margin:0px 15px 0px -2px;
+    background-color: #032541;
+    color: white;
 }
