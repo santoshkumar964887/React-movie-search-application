@@ -23,6 +23,7 @@ export const ResultCard = ({ movie }) => {
         <div>
          <h3 className="title">{movie.Title}</h3>
         </div>
+        </Link>
         <div className="poster-wrappers1">
           <button
             className="btn1"
@@ -34,7 +35,7 @@ export const ResultCard = ({ movie }) => {
               onClick={() => setColorClass("activecolor")}
             />
           </button>
-
+          <Link to={`/movie/${movie.imdbID}`}>
           {movie.Poster ? (
             <img
               className="poster1"
@@ -44,8 +45,9 @@ export const ResultCard = ({ movie }) => {
           ) : (
             <div className="filler-poster" />
           )}
+          </Link>
         </div>
-        </Link>
+        
 
         <div className="info1">
           <div>
