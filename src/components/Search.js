@@ -73,7 +73,7 @@ const Search = () => {
             </li>
           ))}
         </ul>
-      ):<h2>Your Search Is Not Found!</h2>}
+      ):<h2 style={{textAlign:'center'}}>Loading...</h2>}
     </div>
   );
 };
