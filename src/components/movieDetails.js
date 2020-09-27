@@ -9,7 +9,7 @@ const Search = (props) => {
 
   useEffect(() => {
     const { match: { params } } = props;
-   const url=`http://www.omdbapi.com/?i=${params.movieID}&apikey=611ad92e`;
+   const url=`https://www.omdbapi.com/?i=${params.movieID}&apikey=611ad92e`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {

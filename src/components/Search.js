@@ -8,7 +8,7 @@ const Search = () => {
   const [selectQuery, setSelectQuery] = useState("movie");
 
   useEffect(() => {
-    fetch("http://www.omdbapi.com/?s=action&apikey=611ad92e")
+    fetch("https://www.omdbapi.com/?s=action&apikey=611ad92e")
       .then((res) => res.json())
       .then((data) => {
         if (!data.errors) {
@@ -27,7 +27,7 @@ const Search = () => {
     setSelectQuery(e.target.value);
   };
   const handleClick = () => {
-    fetch(`http://www.omdbapi.com/?type=${selectQuery}&s=${query}&apikey=611ad92e`)
+    fetch(`https://www.omdbapi.com/?type=${selectQuery}&s=${query}&apikey=611ad92e`)
       .then((res) => res.json())
       .then((data) => {
         if (!data.errors) {
