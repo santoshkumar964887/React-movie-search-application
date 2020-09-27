@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Watched } from "./components/Watched";
-import { Add } from "./components/Search";
+import Search from "./components/Search";
 import "./App.css";
 import "./lib/font-awesome/css/all.min.css";
 
@@ -15,12 +15,14 @@ function App() {
         <Header />
 
         <Switch>
-          <Route exact path="/">
-            <Add />
-          </Route>
-          <Route path="/watched">
-            <Watched />
-          </Route>
+          <Route exact path="/" component={Search} />
+          <Route
+            exact
+            path="/React-movie-search-application"
+            component={Search}
+          />
+
+          <Route path="/watched" component={Watched} />
         </Switch>
       </Router>
     </GlobalProvider>

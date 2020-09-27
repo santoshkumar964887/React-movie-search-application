@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ResultCard } from "./ResultCard";
 import "../lib/font-awesome/css/style.css";
 import SearchIcon from '@material-ui/icons/Search';
-export const Add = () => {
+const Search = () => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const [selectQuery, setSelectQuery] = useState("movie");
@@ -77,3 +77,4 @@ export const Add = () => {
     </div>
   );
 };
+export default Search; 
