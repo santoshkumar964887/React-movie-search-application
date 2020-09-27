@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import FavoriteSharpIcon from '@material-ui/icons/FavoriteSharp';
 export const Header = () => {
   return (
     <header>
@@ -14,7 +14,7 @@ export const Header = () => {
             
 
             <li>
-              <Link to="/watched">Favorite Movies</Link>
+              <Link to="/watched">Favorite Movies <FavoriteSharpIcon className="faviort-icon" /></Link>
             </li>
 
             <li>
