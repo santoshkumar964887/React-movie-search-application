@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/React-movie-search-application/static/css/main.5c6f9336.chunk.css",
-    "main.js": "/React-movie-search-application/static/js/main.9739434d.chunk.js",
-    "main.js.map": "/React-movie-search-application/static/js/main.9739434d.chunk.js.map",
+    "main.css": "/React-movie-search-application/static/css/main.dbe4b121.chunk.css",
+    "main.js": "/React-movie-search-application/static/js/main.381396ac.chunk.js",
+    "main.js.map": "/React-movie-search-application/static/js/main.381396ac.chunk.js.map",
     "runtime-main.js": "/React-movie-search-application/static/js/runtime-main.3d892414.js",
     "runtime-main.js.map": "/React-movie-search-application/static/js/runtime-main.3d892414.js.map",
-    "static/js/2.f4c95f2f.chunk.js": "/React-movie-search-application/static/js/2.f4c95f2f.chunk.js",
-    "static/js/2.f4c95f2f.chunk.js.map": "/React-movie-search-application/static/js/2.f4c95f2f.chunk.js.map",
+    "static/js/2.c3168762.chunk.js": "/React-movie-search-application/static/js/2.c3168762.chunk.js",
+    "static/js/2.c3168762.chunk.js.map": "/React-movie-search-application/static/js/2.c3168762.chunk.js.map",
     "index.html": "/React-movie-search-application/index.html",
-    "precache-manifest.bacc88616e953e6ea25b3e9935a71199.js": "/React-movie-search-application/precache-manifest.bacc88616e953e6ea25b3e9935a71199.js",
+    "precache-manifest.46e5fc4fe570d26c6a1ebcc15ebb606b.js": "/React-movie-search-application/precache-manifest.46e5fc4fe570d26c6a1ebcc15ebb606b.js",
     "service-worker.js": "/React-movie-search-application/service-worker.js",
-    "static/css/main.5c6f9336.chunk.css.map": "/React-movie-search-application/static/css/main.5c6f9336.chunk.css.map",
-    "static/js/2.f4c95f2f.chunk.js.LICENSE.txt": "/React-movie-search-application/static/js/2.f4c95f2f.chunk.js.LICENSE.txt",
+    "static/css/main.dbe4b121.chunk.css.map": "/React-movie-search-application/static/css/main.dbe4b121.chunk.css.map",
+    "static/js/2.c3168762.chunk.js.LICENSE.txt": "/React-movie-search-application/static/js/2.c3168762.chunk.js.LICENSE.txt",
     "static/media/all.min.css": "/React-movie-search-application/static/media/fa-solid-900.bea989e8.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.3d892414.js",
-    "static/js/2.f4c95f2f.chunk.js",
-    "static/css/main.5c6f9336.chunk.css",
-    "static/js/main.9739434d.chunk.js"
+    "static/js/2.c3168762.chunk.js",
+    "static/css/main.dbe4b121.chunk.css",
+    "static/js/main.381396ac.chunk.js"
   ]
 }
