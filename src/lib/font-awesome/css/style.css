@@ -141,3 +141,16 @@ a{
     margin-right:125px;
     padding:20px;
 }
+.rating1{
+    vertical-align: middle;
+    color: rgb(226, 211, 0);
+}
+.cast1{
+    vertical-align: middle;
+
+}
+.title5{
+    font-size:35px;
+    font-weight: 800;
+    color: rgb(119, 1, 1);
+}

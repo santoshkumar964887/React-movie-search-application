@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../lib/font-awesome/css/style.css";
-import GradeSharpIcon from '@material-ui/icons/GradeSharp';
+import GradeSharpIcon from "@material-ui/icons/GradeSharp";
+import StarRatings from "react-star-ratings";
+import SupervisedUserCircleSharpIcon from "@material-ui/icons/SupervisedUserCircleSharp";
 const Search = () => {
   const [info, setInfo] = useState("");
 
@@ -28,15 +30,24 @@ const Search = () => {
               </div>
               <div class="side-text">
                 <span>
-                  <h1 className="ui red inverted header">{info.Title}</h1>(
-                  {info.Genre})
+                  <h1 className="title5">{info.Title}</h1>({info.Genre})
                 </span>{" "}
                 <div className="ui subheader">{info.Language}</div>
                 <br />
                 <div className="ui subheader">
-                  IMDB Rating <GradeSharpIcon className="rating1"/>:{info.imdbRating}
+                  IMDB Rating{" "}
+                  <StarRatings
+                    rating={Number(info.imdbRating)}
+                    numberOfStars={10}
+                    starRatedColor="darkred"
+                    starDimension="30px"
+                    starSpacing="7px"
+                  />{" "}
+                 
                 </div>
-                <h3>Cast</h3>
+                <h3>
+                  Cast <SupervisedUserCircleSharpIcon className="cast1" />
+                </h3>
                 <p>{info.Actors}</p>
                 <h3>Plot</h3>
                 <p>{info.Plot}</p>
@@ -53,8 +64,6 @@ const Search = () => {
                 </div>
               </div>
             </div>
-
-
 
             <div class="row3">
               <div class="runtime1">
