@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { MovieCard } from "./MovieCard";
 
-export const Watched = () => {
+const Favorite = () => {
   const { watched } = useContext(GlobalContext);
 
   return (
@@ -29,3 +29,4 @@ export const Watched = () => {
     </div>
   );
 };
+export default Favorite;
