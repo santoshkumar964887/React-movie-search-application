@@ -50,7 +50,7 @@
 
 }
 .btn1:hover{
-    background-color: rgb(165, 0, 0);
+    color: rgb(165, 0, 0);
 }
 .activecolor{
     color: rgb(197, 14, 14);
@@ -69,7 +69,7 @@ a{
 }
 .input2{
   width: 30vw;
-  height: 38px;
+  height: 45px;
   border-radius:4px;
   background-color: #032541;
   color: white;
@@ -80,17 +80,64 @@ a{
     color: white;
 }
 #cars{
-    height: 38px;
+    height:45px;
     margin:0px 15px 0px -2px;
     background-color: #032541;
     color: white;
 }
+
 #btn-success{
     vertical-align:super;
-
+    
 }
 .faviort-icon{
     color: darkred;
     vertical-align:sub;
    
+}
+.ui1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.row1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  
+}
+.img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:500px;
+    border:2px solid #032541;
+    border-radius:4px;
+}
+.side-text{
+    width: 600px;
+    border:2px solid #032541;
+    border-radius:4px;
+    padding:20px;
+}
+.row3{
+    display:grid;
+    grid-template-columns:1fr 3fr 1fr;
+  
+}
+.runtime1{
+    border:2px solid #032541;
+    margin-left:125px;
+    padding:20px;
+    
+}
+.write1{
+    border:2px solid #032541;
+
+    padding:20px;
+}
+.realasedate1{
+    border:2px solid #032541;
+    margin-right:125px;
+    padding:20px;
 }

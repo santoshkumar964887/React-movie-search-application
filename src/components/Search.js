@@ -27,7 +27,6 @@ const Search = () => {
     setSelectQuery(e.target.value);
   };
   const handleClick = () => {
-    console.log(`http://www.omdbapi.com/?type=${selectQuery}&s=${query}&apikey=611ad92e`);
     fetch(`http://www.omdbapi.com/?type=${selectQuery}&s=${query}&apikey=611ad92e`)
       .then((res) => res.json())
       .then((data) => {
@@ -50,8 +49,6 @@ const Search = () => {
         />
         <div>
           <select value={selectQuery} id="cars" onChange={handleSelect}>
-            <option value="volvo">Select Type</option>
-            <option value="all">All</option>
             <option value="movie">Movie</option>
             <option value="series">Series</option>
             <option value="episode">Episode</option>
@@ -60,12 +57,12 @@ const Search = () => {
         <div>
           <button type="button" onClick={handleClick} className="btn btn-success" >
             <SearchIcon />
-            <span id="btn-success"> Success</span>
+            <span id="btn-success" className="btn4">Search</span>
           </button>
         </div>
       </div>
 
-      {results.length > 0 ? (
+      { results?(results.length > 0 ? (
         <ul className="results1">
           {results.map((movie) => (
             <li key={movie.imdbID}>
@@ -73,7 +70,7 @@ const Search = () => {
             </li>
           ))}
         </ul>
-      ):<h2 style={{textAlign:'center'}}>Loading...</h2>}
+      ):<h2 style={{textAlign:'center'}}>Loading...</h2>):<h2 style={{textAlign:'center'}}>Result Not Found</h2>}
     </div>
   );
 };
