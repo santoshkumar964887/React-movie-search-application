@@ -19,8 +19,9 @@ export const ResultCard = ({ movie }) => {
   return (
     <div className="result-card">
       <div className="card-container1">
+      <Link to={`/movie/${movie.imdbID}`}>
         <div>
-        <Link to={`/movie/${movie.imdbID}`}> <h3 className="title">{movie.Title}</h3></Link>
+         <h3 className="title">{movie.Title}</h3>
         </div>
         <div className="poster-wrappers1">
           <button
@@ -44,6 +45,7 @@ export const ResultCard = ({ movie }) => {
             <div className="filler-poster" />
           )}
         </div>
+        </Link>
 
         <div className="info1">
           <div>

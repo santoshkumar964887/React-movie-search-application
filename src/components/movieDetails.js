@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "../lib/font-awesome/css/style.css";
-import GradeSharpIcon from "@material-ui/icons/GradeSharp";
 import StarRatings from "react-star-ratings";
 import SupervisedUserCircleSharpIcon from "@material-ui/icons/SupervisedUserCircleSharp";
-const Search = () => {
+const Search = (props) => {
+    
+   
   const [info, setInfo] = useState("");
 
   useEffect(() => {
-    fetch("http://www.omdbapi.com/?i=tt0094612&apikey=611ad92e")
+    const { match: { params } } = props;
+   const url=`http://www.omdbapi.com/?i=${params.movieID}&apikey=611ad92e`;
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -23,12 +26,12 @@ const Search = () => {
     <div>
       {info ? (
         <div className="container1">
-          <div class="ui1">
-            <div class="row1">
-              <div class="img1">
+          <div className="ui1">
+            <div className="row1">
+              <div className="img1">
                 <img src={info.Poster} alt="poster" />
               </div>
-              <div class="side-text">
+              <div className="side-text">
                 <span>
                   <h1 className="title5">{info.Title}</h1>({info.Genre})
                 </span>{" "}
@@ -51,12 +54,12 @@ const Search = () => {
                 <p>{info.Actors}</p>
                 <h3>Plot</h3>
                 <p>{info.Plot}</p>
-                <div class="ui grid">
-                  <div class="ten wide column">
+                <div className="ui grid">
+                  <div className="ten wide column">
                     <h3>Director</h3>
                     <p>{info.Director}</p>
                   </div>
-                  <div class="ten wide column tablet six wide computer column">
+                  <div className="ten wide column tablet six wide computer column">
                     {" "}
                     <h3>Box Office Collection</h3>
                     <p>{info.BoxOffice}</p>
@@ -65,17 +68,17 @@ const Search = () => {
               </div>
             </div>
 
-            <div class="row3">
-              <div class="runtime1">
+            <div className="row3">
+              <div className="runtime1">
                 <p>Runtime</p>
                 <p>{info.Runtime}</p>
               </div>
-              <div class="write1">
+              <div className="write1">
                 <p>
                   <strong>Writers:</strong> {info.Writer}
                 </p>
               </div>
-              <div class="realasedate1">
+              <div className="realasedate1">
                 <p>Release date</p>
                 <p>{info.Released}</p>
               </div>
